@@ -22,6 +22,15 @@ class SecondViewController: UIViewController {
     }
     
 
+    @IBOutlet weak var sumNumbers: UILabel!
+    @IBOutlet weak var numberInput: UITextField!
+    var sum:Int = 0
+    @IBAction func AddNumbers(sender: AnyObject) {
+        let number:Int? = Int(numberInput.text!)
+        sum += number!
+        sumNumbers.text = String(sum)
+        
+    }
     /*
     // MARK: - Navigation
 
